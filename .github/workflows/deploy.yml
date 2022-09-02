@@ -3,7 +3,8 @@ name: Deploy
 # On pushes to our default branch
 on:
   push:
-    branches: [$default-branch]
+    branches:
+      - main
 # If we can write to it
 permissions:
   contents: write
