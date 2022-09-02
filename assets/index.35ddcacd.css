@@ -1,0 +1,1 @@
+label{display:block}.form--group{margin-bottom:1em}.required:after{content:"*";color:red}label input{margin-right:.5em}input:invalid,textarea:invalid{border:1px solid red}

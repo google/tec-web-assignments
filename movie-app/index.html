@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!--
+ Copyright 2022 Google LLC
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Lookup</title>
+    
+    
+    <script type="module" crossorigin src="/assets/movie-app/index.64c91a9b.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/modulepreload-polyfill.c7c6310f.js">
+    <link rel="modulepreload" crossorigin href="/assets/index.783118d6.js">
+    <link rel="stylesheet" href="/assets/index.b3b890cd.css">
+  </head>
+  <body>
+    <form action="POST" id="search">
+      <div class="form--group">
+        <label for="key">API Key</label>
+        <input
+          type="text"
+          id="key"
+          name="key"
+          placeholder="Enter your API Key"
+          required
+        />
+      </div>
+      <div class="form--group">
+        <label for="title">Movie Title</label>
+        <input
+          type="text"
+          id="title"
+          name="title"
+          placeholder="Enter a movie title"
+          required
+        />
+      </div>
+      <div class="form--group">
+        <label for="year">Year</label>
+        <input
+          type="number"
+          id="year"
+          name="year"
+          min="1928"
+          placeholder="Enter a year"
+        />
+      </div>
+
+      <div class="form--group">
+        <input type="submit" value="Search" />
+        <input type="reset" value="Reset" />
+      </div>
+    </form>
+    <div id="output"></div>
+
+    <template id="movie-template">
+      <style>
+        .movie {
+          max-width: max-content;
+          display: grid;
+          grid-template-columns: auto auto;
+          gap: 1rem;
+        }
+
+        .hidden {
+          display: none;
+        }
+      </style>
+      <div class="movie">
+        <img src="" alt="" class="movie--poster" />
+        <div>
+          <h2 class="movie--title"></h2>
+          <p class="movie--year"></p>
+          <div class="actions">
+            <button class="movie--favorite">Favorite</button>
+            <button class="movie--show-notes">Show Notes</button>
+          </div>
+          <textarea
+            name=""
+            id=""
+            cols="30"
+            rows="10"
+            class="movie--notes hidden"
+          ></textarea>
+        </div>
+      </div>
+    </template>
+  </body>
+</html>

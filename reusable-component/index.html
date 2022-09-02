@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--
+ Copyright 2022 Google LLC
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reusable Components</title>
+    
+    <script type="module" crossorigin src="/assets/reusable-component/index.30c82115.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/modulepreload-polyfill.c7c6310f.js">
+  </head>
+  <body>
+    <template id="comment">
+      <style>
+        .comment {
+          border: 1px solid #333;
+          margin-bottom: 1em;
+        }
+
+        .comment--head {
+          border-bottom: 1px solid #ccc;
+          padding: 0.25rem 0.5rem;
+        }
+
+        .comment--body {
+          padding: 0.5rem;
+        }
+      </style>
+      <article class="comment">
+        <header class="comment--head">
+          <p>
+            <span class="comment--name"></span> (<span
+              class="comment--email"
+            ></span
+            >)
+          </p>
+        </header>
+        <p class="comment--body"></p>
+      </article>
+    </template>
+
+    <my-comment
+      name="John"
+      email="john@foo.com"
+      body="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quidem."
+    ></my-comment>
+    <my-comment
+      name="Alice"
+      email="alice@bar.com"
+      body="Ipsum 2 my order."
+    ></my-comment>
+    <my-comment
+      name="Pat"
+      email="pat@hello.world"
+      body="The same thing we do every night Pinky"
+    ></my-comment>
+  </body>
+</html>
