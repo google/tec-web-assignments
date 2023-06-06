@@ -13,7 +13,7 @@
   },
   "devDependencies": {
     "prettier": "^2.7.1",
-    "vite": "^3.0.7"
+    "vite": "^3.2.7"
   },
   "dependencies": {
     "idb": "^7.0.2"
